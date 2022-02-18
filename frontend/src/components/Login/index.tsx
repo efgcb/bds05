@@ -1,16 +1,24 @@
 import { useForm } from 'react-hook-form';
+import { requestBackendLogin } from 'util/requests';
 
 import './styles.css';
 
 type FormData = {
-  username : string;
-  password : string;
-}
+  username: string;
+  password: string;
+};
 
 const Login = () => {
   const { register, handleSubmit } = useForm<FormData>();
-  const onSubmit = (formData : FormData) => {
-      console.log(formData);
+  
+  const onSubmit = (formData: FormData) => {
+    requestBackendLogin(formData)
+      .then((response) => {
+        console.log('SUCESSO', response);
+      })
+      .catch((error) => {
+        console.log('ERRO', error);
+      });
   };
 
   return (
@@ -34,10 +42,9 @@ const Login = () => {
             placeholder="Password"
             name="password"
           />
-        </div>     
-        <button className="btn btn-primary btn-login">FAZER LOGIN</button>   
+        </div>
+        <button className="btn btn-primary btn-login">FAZER LOGIN</button>
       </form>
-     
     </div>
   );
 };
