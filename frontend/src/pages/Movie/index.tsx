@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './styles.css';
 
-const Assentments = () => {
+const Movie = () => {
   return (
     <div className="assentment-container">
       <h1>Tela listagem de filmes</h1>
@@ -15,4 +15,4 @@ const Assentments = () => {
   );
 };
 
-export default Assentments;
+export default Movie;

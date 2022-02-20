@@ -1,7 +1,7 @@
 
 import Navbar from "components/Navbar";
-import Assentments from "pages/Assentments";
-import AssentmentsDetails from "pages/AssentmentsDetails";
+import Assentments from "pages/Movie";
+import AssentmentsDetails from "pages/MovieDetails";
 import Auth from "pages/Auth";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 

@@ -5,7 +5,7 @@ import AssentmentAval from "components/AssentmentAval";
 import './styles.css';
 
 
-const AssentmentsDetails = () => {
+const MovieDetails = () => {
     return (
         <div className="assentmentDetails-container">        
             <div className="assentmentDetails-content-container">          
@@ -22,4 +22,4 @@ const AssentmentsDetails = () => {
     );
 };
 
-export default AssentmentsDetails;
+export default MovieDetails;
